@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         print(greenView.bounds)
         print(pinkView.frame)
         print(pinkView.bounds)
+        
+        print(self.navigationController?.viewControllers)
     }
 
     @IBAction func buttonTapped(_ sender: Any) {
