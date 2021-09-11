@@ -19,15 +19,10 @@ class RedViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let user = self.user else {
-            print("self.user 가 nil 입니다.")
-            return
-        }
-        
-        print(user.name)
-        print(user.gender)
-        print(user.birthDay)
-        print(user.toeicScore)
-        print(user.agreed)
+        print(user?.name)
+        print(user?.gender)
+        print(user?.birthDay)
+        print(user?.toeicScore)
+        print(user?.agreed)
     }
 }

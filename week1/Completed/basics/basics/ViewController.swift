@@ -38,6 +38,5 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: Any) {
         topView.backgroundColor = .systemIndigo
     }
-    
 }
 
