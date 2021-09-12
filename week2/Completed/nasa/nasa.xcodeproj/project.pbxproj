@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4BFF4B26EDFB2C002D5427 /* APODCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4BFF4A26EDFB2C002D5427 /* APODCollectionViewCell.swift */; };
 		1D8C0AA926DD2ADE00E2A233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C0AA826DD2ADE00E2A233 /* AppDelegate.swift */; };
 		1D8C0AAB26DD2ADE00E2A233 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C0AAA26DD2ADE00E2A233 /* SceneDelegate.swift */; };
 		1D8C0AAD26DD2ADE00E2A233 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C0AAC26DD2ADE00E2A233 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D4BFF4A26EDFB2C002D5427 /* APODCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D8C0AA526DD2ADE00E2A233 /* nasa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nasa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8C0AA826DD2ADE00E2A233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8C0AAA26DD2ADE00E2A233 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				1D8C0AAA26DD2ADE00E2A233 /* SceneDelegate.swift */,
 				1D8C0AAC26DD2ADE00E2A233 /* ViewController.swift */,
 				1D8C0AAE26DD2ADE00E2A233 /* Main.storyboard */,
+				1D4BFF4A26EDFB2C002D5427 /* APODCollectionViewCell.swift */,
 				1DB53BAA26ECD99F00775B03 /* DetailViewController.swift */,
 				1D8C0AB126DD2AE000E2A233 /* Assets.xcassets */,
 				1D8C0AB326DD2AE000E2A233 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4BFF4B26EDFB2C002D5427 /* APODCollectionViewCell.swift in Sources */,
 				1D8C0AAD26DD2ADE00E2A233 /* ViewController.swift in Sources */,
 				1D8C0AA926DD2ADE00E2A233 /* AppDelegate.swift in Sources */,
 				1D8C0AAB26DD2ADE00E2A233 /* SceneDelegate.swift in Sources */,
