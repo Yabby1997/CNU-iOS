@@ -8,11 +8,10 @@
 import Foundation
 
 class User {
+    let id: UUID = UUID()
     let name: String
     let gender: User.Gender
     let birthDay: Date
-    let toeicScore: Int
-    let agreed: Bool
     
     enum Gender: Int, CustomStringConvertible {
         case male, female
@@ -27,11 +26,9 @@ class User {
         }
     }
     
-    init(name: String, gender: User.Gender, birthDay: Date, toeicScore: Int, agreed: Bool) {
+    init(name: String, gender: User.Gender, birthDay: Date) {
         self.name = name
         self.gender = gender
         self.birthDay = birthDay
-        self.toeicScore = toeicScore
-        self.agreed = agreed
     }
 }

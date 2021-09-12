@@ -10,24 +10,19 @@ import UIKit
 class RedViewController: UIViewController {
     var user: User? = nil
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(self.navigationController?.viewControllers)
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        guard let user = self.user else {
-            print("self.user 가 nil 입니다.")
-            return
-        }
-        
-        print(user.name)
-        print(user.gender)
-        print(user.birthDay)
-        print(user.toeicScore)
-        print(user.agreed)
+        guard let user = user else { return }
+        nameLabel.text = user.name
+        idLabel.text = String(describing: user.id)
+        genderLabel.text = user.gender.description
+        birthdayLabel.text = String(describing: user.birthDay)
     }
 }
