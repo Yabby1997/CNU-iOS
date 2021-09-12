@@ -40,27 +40,17 @@
                                                         <constraint firstAttribute="width" secondItem="c7v-lR-MSf" secondAttribute="height" multiplier="1:1" id="vif-Al-Aaa"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLv-bv-fl1">
-                                                    <rect key="frame" x="10" y="189" width="209" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="c7v-lR-MSf" firstAttribute="top" secondItem="1gq-ys-bKg" secondAttribute="top" id="Lxb-EL-RPN"/>
-                                                <constraint firstAttribute="bottom" secondItem="tLv-bv-fl1" secondAttribute="bottom" constant="10" id="PLM-dt-II8"/>
-                                                <constraint firstItem="tLv-bv-fl1" firstAttribute="leading" secondItem="1gq-ys-bKg" secondAttribute="leading" constant="10" id="Xde-hX-9P6"/>
                                                 <constraint firstAttribute="bottom" secondItem="c7v-lR-MSf" secondAttribute="bottom" id="YaA-Qe-8uh"/>
                                                 <constraint firstAttribute="trailing" secondItem="c7v-lR-MSf" secondAttribute="trailing" id="Zvp-W1-wea"/>
-                                                <constraint firstAttribute="trailing" secondItem="tLv-bv-fl1" secondAttribute="trailing" constant="10" id="cnj-Wh-uUG"/>
                                                 <constraint firstItem="c7v-lR-MSf" firstAttribute="leading" secondItem="1gq-ys-bKg" secondAttribute="leading" id="tXe-Z1-Ekh"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="229" height="220"/>
                                         <connections>
                                             <outlet property="thumbnailImageView" destination="c7v-lR-MSf" id="tG0-zC-I0g"/>
-                                            <outlet property="titleLabel" destination="tLv-bv-fl1" id="drN-Y5-tFL"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

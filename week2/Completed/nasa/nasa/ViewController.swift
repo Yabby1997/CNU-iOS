@@ -24,12 +24,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         apodCollectionView.delegate = self
         apodCollectionView.dataSource = self
         
-        APIService.fetch { self.apods = $0 }
+        APIService.fetchAPOD { self.apods = $0 }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailViewController = segue.destination as? DetailViewController {
-//            detailViewController.item = selectedItem
+            guard let index = selectedItem, let apod = apods?[index] else { return }
+            detailViewController.apod = apod
         }
     }
     
@@ -39,9 +40,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "APODCollectionViewCell", for: indexPath) as? APODCollectionViewCell else { return UICollectionViewCell() }
-        cell.thumbnailImageView.image = #imageLiteral(resourceName: "apple")
-        cell.titleLabel.text = "제목이 들어갈 위치"
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "APODCollectionViewCell", for: indexPath) as? APODCollectionViewCell,
+              let apod = apods?[indexPath.item] else { return UICollectionViewCell() }
+        
+        APIService.fetchData(url: apod.url) { data in
+            cell.thumbnailImageView.image = UIImage(data: data)
+        }
+        cell.thumbnailImageView.contentMode = .scaleAspectFill
         return cell
     }
     
