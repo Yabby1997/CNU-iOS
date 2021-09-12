@@ -10,22 +10,32 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var apodCollectionView: UICollectionView!
     var selectedItem: Int? = nil
+    var apods: [APODResponse]? = nil {
+        didSet {
+            DispatchQueue.main.async {
+                self.apodCollectionView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         apodCollectionView.delegate = self
         apodCollectionView.dataSource = self
+        
+        APIService.fetch { self.apods = $0 }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailViewController = segue.destination as? DetailViewController {
-            detailViewController.item = selectedItem
+//            detailViewController.item = selectedItem
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        guard let apods = self.apods else { return 0 }
+        return apods.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
