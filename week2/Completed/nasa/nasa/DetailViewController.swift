@@ -8,13 +8,13 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    var row: Int? = nil
+    var item: Int? = nil
     @IBOutlet weak var infoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let row = self.row else { return }
-        infoLabel.text = "\(row) 번째 셀에 대한 정보입니다."
+        guard let item = self.item else { return }
+        infoLabel.text = "\(item) 번째 셀에 대한 정보입니다."
     }
 }
